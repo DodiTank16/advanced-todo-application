@@ -1,6 +1,6 @@
 # Advanced Todo Application
 
-Welcome to the Advanced Todo Application! This project is a React application developed with TypeScript that allows users to manage their tasks efficiently. It supports CRUD operations on tasks, login/logout functionality, and drag-and-drop functionality to move tasks between different statuses.
+Welcome to the Advanced Todo Application! This project is designed to help you manage your tasks efficiently using a clean and intuitive interface. Built with React and TypeScript, it offers a seamless experience for creating, reading, updating, and deleting tasks. Additionally, it includes user authentication and a drag-and-drop feature for task management.
 
 ## Features
 
