@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+html {
+  font-family: "Unbounded", sans-serif;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 100%;
   display: flex;
-  flex-direction: column;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  text-decoration: underline wavy;
+  text-transform: uppercase;
+  font-style: normal;
+  margin: 30px 0;
+  color: rgb(0, 255, 208);
+  z-index: 1;
+
+}
+
+.input-field {
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.shotcut-message {
+  position: relative;
+  width: 100px;
+  margin: 12px;
+  right: 160px;
+  border: none;
+  font-size: 15px;
+  top: -2px;
+  color: #989b9f;
+}
+
+.add-button {
+  position: absolute;
+  width: 165px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #80C4E9;
+  background-color: #80C4E9;
+  right: 20px;
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.add-button .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.add-button .button__icon {
+  position: absolute;
+  transform: translateX(125px);
+  height: 100%;
+  width: 39px;
+  background-color: #54a7d3;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.add-button .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.add-button:hover {
+  background: #80C4E9;
+}
+
+.add-button:hover .button__text {
+  color: transparent;
+}
+
+.add-button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.add-button:active .button__icon {
+  background-color: #2e8644;
+}
+
+.add-button:active {
+  border: 1px solid #2e8644;
+}
+
+.todos {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  background-color: #80C4E9;
+}
+
+.todos__heading {
+  font-size: 30px;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: #FF7F3E;
+  transition: 0.2s;
+  align-items: center;
+  color: #FFF6E9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo-single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
+}
+
+.todo-single-text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.todo-single-text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.remove {
+  background-color: #604CC3;
+}
+
+.dragactive {
+  /* background-color: #ffc471; */
+  background-color: #ffb64f;
+
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+
+  .container {
+    /* width: 95%; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
   }
 }
